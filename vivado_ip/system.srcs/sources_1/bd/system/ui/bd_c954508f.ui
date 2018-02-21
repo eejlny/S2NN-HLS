@@ -1,0 +1,38 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 210 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 230 -defaultsOSRD
+preplace inst axi_interconnect -pg 1 -lvl 2 -y 200 -defaultsOSRD
+preplace inst hls_snn_izikevich_0 -pg 1 -lvl 1 -y 320 -defaultsOSRD
+preplace inst zynq -pg 1 -lvl 3 -y 640 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 3 1 NJ
+preplace netloc S_AXI_HP0_1 1 2 1 N
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 3 270 10 NJ 10 1150
+preplace netloc axi_interconnect_mm2s_introut0 1 2 1 690
+preplace netloc S_AXI_HP3_1 1 2 1 730
+preplace netloc S_AXI_HP1_1 1 2 1 750
+preplace netloc axi_interconnect_M_AXIS_MM2S 1 0 3 -60 430 NJ 430 600
+preplace netloc axi_interconnect_mm2s_introut1 1 2 1 670
+preplace netloc axi_interconnect_mm2s_introut2 1 2 1 660
+preplace netloc S_AXI_HP2_1 1 2 1 740
+preplace netloc axi_interconnect_mm2s_introut3 1 2 1 650
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 0 4 -70 490 290 400 NJ 110 1130
+preplace netloc int_dma_0_rx_1 1 2 1 710
+preplace netloc processing_system7_0_FIXED_IO 1 3 1 NJ
+preplace netloc axi_interconnect_M_AXIS_MM2S1 1 0 3 -50 440 NJ 440 590
+preplace netloc axi_interconnect_M_AXIS_MM2S2 1 0 3 -100 460 NJ 460 620
+preplace netloc axi_interconnect_M_AXIS_MM2S3 1 0 3 -90 470 NJ 470 610
+preplace netloc hls_snn_izikevich_0_output_stream 1 1 1 270
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 300 380 NJ 80 1160
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 -80 480 280 390 NJ 100 1140
+preplace netloc axi_interconnect_M00_AXI 1 0 3 -110 450 NJ 450 630
+preplace netloc hls_snn_izikevich_0_interrupt 1 1 2 NJ 420 640
+levelinfo -pg 1 -130 110 450 940 1200 -top 0 -bot 1240
+",
+}
+{
+   da_axi4_cnt: "7",
+   da_axi4_s2mm_cnt: "1",
+   da_ps7_cnt: "1",
+}

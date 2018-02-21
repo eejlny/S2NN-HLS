@@ -1,0 +1,74 @@
+#ifndef _CONFIG_H_
+#define _CONFIG_H_
+
+#include "common/snn_env.h"
+
+/*****************************************************************************
+ *                             snn_config.h                                  *
+ *****************************************************************************
+ *  This file contains the basic definitions to configure the different      *
+ *  flavors possible to be generated for the Spiking Neural Network based    *
+ *  in Izikevich's equations.                                                *
+ *                                                      _____________        *
+ *  Blocks system's diagram:                           |             |       *
+ *  Throughput: 256 bit/cycle    					   | DDR Memory  |<---+  *
+ *   _______________          _______________          |_____________|    |  *
+ *  |         S_Lite|<--32-->|M_Lite         |         _______________    |  *
+ *  |               |        |         S_Lite|<--32-->|M_AXI_GP0   DDR|<--+  *
+ *  |  (Out) M_AXIS0|---64-->|S_AXIS0        |        |               |      *
+ *  |   (In) S_AXIS0|<--64---|M_AXIS0  M_AXI0|<--64---|S_HP_AXI0      |      *
+ *  |   (In) S_AXIS1|<--64---|M_AXIS1  M_AXI1|<--64---|S_HP_AXI1      |      *
+ *  |   (In) S_AXIS2|<--64---|M_AXIS2  M_AXI2|<--64---|S_HP_AXI2      |      *
+ *  |   (In) S_AXIS3|<--64---|M_AXIS3  M_AXI3|<--64---|S_HP_AXI3      |      *
+ *  |_______________|        |_______________|        |_______________|      *
+ *  hls_snn_izikevich		 4 x AXI-4 Stream          Zynq Processing       *
+ *	   (HLS Block)	        Interconnect & DMAs	            System           *
+ *                                                                           *
+ *****************************************************************************/
+
+/* Set in the main entry script the RUN_TYPE to configure type of application to build */
+#ifndef RUN_TYPE
+#error RUN_TYPE is undefined at main entry script. Set RUN_TYPE as HLS_SYNTHESIS, ZYNQ_HW or SDK_NO_HW
+#endif
+
+/*****************************************************************************
+ *                           User Settings	        	                     *
+ *****************************************************************************/
+/* Set the network size of SNN. Neurons = NETWORK_SIZE^2 and Synapses = NETWORK_SIZE^3 */
+#define PRECISION_TYPE			FLOATING_POINT
+/* Application type */
+#define APP_TYPE				APP_RANDOM
+/*****************************************************************************
+ *                           Application Settings	        	             *
+ *****************************************************************************/
+/* Enable or disable the execution of the software version SNN */
+#define RUN_SW_VERSION
+/* Enable or disable the execution of the hardware version SNN */
+#if RUN_TYPE == TYPE_HLS || RUN_TYPE == TYPE_ZYNQ
+#define RUN_HW_VERSION
+#endif
+/* Set the type of results to be persisted, NONE, STDOUT or FILE */
+#if RUN_TYPE == TYPE_HLS
+#define PERSIST_HW_RESULTS		RESULTS_FILE
+#define PERSIST_SW_RESULTS		RESULTS_FILE
+#elif RUN_TYPE == TYPE_ZYNQ
+#define PERSIST_HW_RESULTS		RESULTS_STDOUT
+#define PERSIST_SW_RESULTS		RESULTS_NONE
+#elif RUN_TYPE == TYPE_SW_APP
+#define PERSIST_HW_RESULTS		RESULTS_NONE
+#define PERSIST_SW_RESULTS		RESULTS_FILE
+#endif
+/* Define typedef for int32 bits */
+#if RUN_TYPE == TYPE_SW_APP
+#define DEFINE_INT32
+#endif
+#define SIM_NATIVE_HLS_STREAM
+/*****************************************************************************/
+
+/* Include common definitions */
+#include "common/snn_defs.h"
+
+/* Include network-specific definitions */
+#include "networks/snn_network_defs.h"
+
+#endif /* _CONFIG_H_ */

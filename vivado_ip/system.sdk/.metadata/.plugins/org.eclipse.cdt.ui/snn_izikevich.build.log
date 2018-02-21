@@ -1,0 +1,16 @@
+19:50:38 **** Auto Build of configuration Debug for project snn_izikevich ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -I../../standalone_bsp_0/ps7_cortexa9_0/include -IC:/Xilinx/Vivado_HLS/2015.4/include/etc -IC:/Xilinx/Vivado_HLS/2015.4/include -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: snn_izikevich.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "snn_izikevich.elf"  ./src/platform.o   -l-Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2015.4/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld.exe: cannot find -l-Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+collect2.exe: error: ld returned 1 exit status
+make: *** [snn_izikevich.elf] Error 1
+
+19:50:39 Build Finished (took 1s.234ms)
+

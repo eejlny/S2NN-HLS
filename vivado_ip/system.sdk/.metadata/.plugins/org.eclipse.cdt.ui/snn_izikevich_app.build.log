@@ -1,0 +1,122 @@
+16:49:40 **** Auto Build of configuration Debug for project snn_izikevich_app ****
+make all 
+'Building file: C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O3 -g3 -IC:/Xilinx/Vivado_HLS/2015.4/include -c -fmessage-length=0 -MT"src/hw/snn_izikevich_top.o" -mlittle-endian -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/hw/snn_izikevich_top.d" -MT"src/hw/snn_izikevich_top.d" -o "src/hw/snn_izikevich_top.o" "C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp"
+In file included from C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:13:0:
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich.h:23:0: warning: ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]
+   #pragma HLS PIPELINE II=1
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich.h:147:0: warning: ignoring #pragma HLS ARRAY_RESHAPE [-Wunknown-pragmas]
+  PRAGMA_HLS(HLS ARRAY_RESHAPE variable=neuron_type complete dim=2)
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich.h:148:0: warning: ignoring #pragma HLS ARRAY_PARTITION [-Wunknown-pragmas]
+  PRAGMA_HLS(HLS ARRAY_PARTITION variable=synapse_fetch block factor=SYNAPSE_PARTITION_FACTOR dim=1)
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich.h:149:0: warning: ignoring #pragma HLS ARRAY_PARTITION [-Wunknown-pragmas]
+  PRAGMA_HLS(HLS ARRAY_PARTITION variable=synapse_cache block factor=SYNAPSE_PARTITION_FACTOR dim=1)
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich.h:157:0: warning: ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]
+   PRAGMA_HLS(HLS PIPELINE II=MAX_PIPELINE_THROUGHPUT)
+ ^
+In file included from C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:14:0:
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_axi.h:16:0: warning: ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]
+   #pragma HLS PIPELINE II=2
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_axi.h:44:0: warning: ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]
+    #pragma HLS PIPELINE II=2
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:42:0: warning: ignoring #pragma HLS UNROLL [-Wunknown-pragmas]
+   #pragma HLS UNROLL
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:48:0: warning: ignoring #pragma HLS PIPELINE [-Wunknown-pragmas]
+   #pragma HLS PIPELINE
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:81:0: warning: ignoring #pragma HLS INTERFACE [-Wunknown-pragmas]
+  #pragma HLS INTERFACE s_axilite port=return bundle=control
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:82:0: warning: ignoring #pragma HLS INTERFACE [-Wunknown-pragmas]
+  #pragma HLS INTERFACE s_axilite port=state bundle=control
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:83:0: warning: ignoring #pragma HLS INTERFACE [-Wunknown-pragmas]
+  #pragma HLS INTERFACE s_axilite port=p_input bundle=control
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:84:0: warning: ignoring #pragma HLS INTERFACE [-Wunknown-pragmas]
+  #pragma HLS INTERFACE s_axilite port=output_indexes bundle=control
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:85:0: warning: ignoring #pragma HLS INTERFACE [-Wunknown-pragmas]
+  #pragma HLS INTERFACE axis port=input_stream0
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:86:0: warning: ignoring #pragma HLS INTERFACE [-Wunknown-pragmas]
+  #pragma HLS INTERFACE axis port=input_stream1
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:87:0: warning: ignoring #pragma HLS INTERFACE [-Wunknown-pragmas]
+  #pragma HLS INTERFACE axis port=input_stream2
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:88:0: warning: ignoring #pragma HLS INTERFACE [-Wunknown-pragmas]
+  #pragma HLS INTERFACE axis port=input_stream3
+ ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:89:0: warning: ignoring #pragma HLS INTERFACE [-Wunknown-pragmas]
+  #pragma HLS INTERFACE axis port=output_stream
+ ^
+In file included from C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:13:0:
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich.h: In function 'void snn_update_neuron_synapses(const vu_dat_t*, const uint1_t*, s_dat_t (*)[30])':
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich.h:22:2: warning: label 'synapses_layer_updates' defined but not used [-Wunused-label]
+  synapses_layer_updates: for (x = 0, l = 0; l < NUMBER_OF_LAYERS; l++) for (xl = 0; xl < NEURONS_PER_LAYER; xl++, x++) {
+  ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich.h: In function 'void snn_get_synaptic_conductances(const uint1_t (*)[30], const s_dat_t (*)[30], vu_dat_t*, vu_dat_t*, hls_stream_64_t&, hls_stream_64_t&, hls_stream_64_t&, hls_stream_64_t&, ap_uint<64>*)':
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich.h:170:3: warning: label 'synapses_per_neuron' defined but not used [-Wunused-label]
+   synapses_per_neuron: for (b = 0, y = 0; y < NEURONS_PER_LAYER; y++, b+= WEIGHT_BITS) {
+   ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich.h:151:2: warning: label 'input_synapses_cache' defined but not used [-Wunused-label]
+  input_synapses_cache: for (y = 0; y < NEURONS_PER_LAYER; y++) {
+  ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich.h:155:2: warning: label 'synaptic_conductances' defined but not used [-Wunused-label]
+  synaptic_conductances: for (x = 0, l = 0; l < NUMBER_OF_LAYERS; l++) for (xl = 0; xl < NEURONS_PER_LAYER; xl++, x++) {
+  ^
+In file included from C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp:14:0:
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_axi.h: In function 'void axis_cp_output_to_stream(hls_stream_64_t&, vu_dat_t*, uint32_t*, ap_uint<64>*)':
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_axi.h:65:25: warning: unused variable 'axi_idx' [-Wunused-variable]
+  uint32_t stream_id, x, axi_idx;
+                         ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_axi.h:80:2: warning: label 'firing_outputs' defined but not used [-Wunused-label]
+  firing_outputs: for (stream_id = 0; stream_id < AXI_FIRINGS_LENGTH; stream_id++) {
+  ^
+C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_axi.h:68:2: warning: label 'potential_outputs' defined but not used [-Wunused-label]
+  potential_outputs: for (stream_id = 0, x = 0; stream_id < AXI_POTENTIAL_OUTPUT_LENGTH; stream_id++, x+=2) {
+  ^
+'Finished building: C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/hw/snn_izikevich_top.cpp'
+' '
+'Building file: C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/main_zynq.cpp'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O3 -g3 -IC:/Xilinx/Vivado_HLS/2015.4/include -c -fmessage-length=0 -MT"src/main_zynq.o" -mlittle-endian -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main_zynq.d" -MT"src/main_zynq.d" -o "src/main_zynq.o" "C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/main_zynq.cpp"
+In file included from C:/Xilinx/Vivado_HLS/2015.4/include/ap_int.h:74:0,
+                 from C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/common/../networks/../common/snn_types.h:9,
+                 from C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/common/../networks/snn_network_defs.h:5,
+                 from C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/common/../snn_config.h:72,
+                 from C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/common/snn_start.h:8,
+                 from C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/main_zynq.cpp:6:
+C:/Xilinx/Vivado_HLS/2015.4/include/etc/ap_int_sim.h: In function 'void init_network(uint1_sw_t, uint1_sw_t)':
+C:/Xilinx/Vivado_HLS/2015.4/include/etc/ap_int_sim.h:494:7: warning: assuming signed overflow does not occur when assuming that (X + c) < X is always false [-Wstrict-overflow]
+       if(l_index>h_index)
+       ^
+C:/Xilinx/Vivado_HLS/2015.4/include/etc/ap_int_sim.h: In function 'int run_network()':
+C:/Xilinx/Vivado_HLS/2015.4/include/etc/ap_int_sim.h:494:7: warning: assuming signed overflow does not occur when assuming that (X + c) < X is always false [-Wstrict-overflow]
+       if(l_index>h_index)
+       ^
+'Finished building: C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/src/main_zynq.cpp'
+' '
+'Building target: snn_izikevich_app.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "snn_izikevich_app.elf"  ./src/hw/zynq/platform.o  ./src/hw/snn_izikevich_top.o  ./src/main_zynq.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: snn_izikevich_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size snn_izikevich_app.elf  |tee "snn_izikevich_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 587116	   3648	20521344	21112108	142252c	snn_izikevich_app.elf
+'Finished building: snn_izikevich_app.elf.size'
+' '
+
+16:50:30 Build Finished (took 49s.873ms)
+

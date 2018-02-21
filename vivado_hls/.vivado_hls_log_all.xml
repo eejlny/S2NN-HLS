@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTGEN-101] Register 'output_indexes_mem_1' is power-on initialization." projectName="hls" solutionName="solution" date="2016-08-17T18:40:54.414+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'output_indexes_mem_0' is power-on initialization." projectName="hls" solutionName="solution" date="2016-08-17T18:40:54.307+0100" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 12, distance = 1)&#xD;&#xA;   between axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162) and axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162)." projectName="hls" solutionName="solution" date="2016-08-17T18:40:02.439+0100" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 11, distance = 1)&#xD;&#xA;   between axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162) and axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162)." projectName="hls" solutionName="solution" date="2016-08-17T18:40:02.427+0100" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 10, distance = 1)&#xD;&#xA;   between axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162) and axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162)." projectName="hls" solutionName="solution" date="2016-08-17T18:40:02.377+0100" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 9, distance = 1)&#xD;&#xA;   between axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162) and axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162)." projectName="hls" solutionName="solution" date="2016-08-17T18:39:45.557+0100" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 8, distance = 1)&#xD;&#xA;   between axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162) and axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162)." projectName="hls" solutionName="solution" date="2016-08-17T18:39:45.488+0100" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 7, distance = 1)&#xD;&#xA;   between axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162) and axis read on port 'stream0_V_data' (src/hw/snn_izikevich.h:108->src/hw/snn_izikevich.h:162)." projectName="hls" solutionName="solution" date="2016-08-17T18:39:45.406+0100" type="Warning"/>
+        <logs message="@W [SYNCHK-23] src/hw/snn_izikevich.h:114: variable-indexed range selection may cause suboptimal QoR." projectName="hls" solutionName="solution" date="2016-08-17T18:38:50.629+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

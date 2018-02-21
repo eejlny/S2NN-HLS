@@ -1,0 +1,382 @@
+#ifndef _START_H_
+#define _START_H_
+
+// Common libraries
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "../snn_config.h"
+#include "snn_types.h"
+#include "snn_network.h"
+#include "snn_results.h"
+
+// Algorithm libraries
+#ifdef RUN_HW_VERSION
+#if RUN_TYPE == TYPE_ZYNQ
+#include "../hw/zynq/platform.h"
+#include "../hw/snn_izikevich_hw_zynq.h"
+#elif RUN_TYPE == TYPE_HLS
+#include "../hw/snn_izikevich_hw_sim.h"
+#endif
+#endif /* RUN_HW_VERSION */
+#ifdef RUN_SW_VERSION
+#include "../sw/snn_izikevich_sw.h"
+#endif /* RUN_SW_VERSION */
+
+// Time libraries
+#if RUN_TYPE == TYPE_ZYNQ
+#include "xtime_l.h"
+#else
+#include <time.h>
+#define XST_SUCCESS 0
+#endif
+
+#if RUN_TYPE == TYPE_ZYNQ
+#define COUNTS_PER_MS	(COUNTS_PER_SECOND/1000)
+XTime clk_start, clk_end, clk_duration = 0;
+void start_clock() { XTime_GetTime(&clk_start); }
+void stop_clock()  { XTime_GetTime(&clk_end); clk_duration += (clk_end - clk_start); }
+#else
+#define COUNTS_PER_MS	(CLOCKS_PER_SEC/1000)
+unsigned long clk_start, clk_end, clk_duration;
+void start_clock() { clk_start = clock(); }
+void stop_clock()  { clk_end = clock(); clk_duration += (clk_end - clk_start); }
+#endif
+void reset_clock() { clk_duration = 0; }
+float32_t get_clock_ms()  { return (1.0 * clk_duration) / COUNTS_PER_MS; }
+
+int run_network();
+void get_inputs(int32_t t);
+void init_network(uint1_sw_t neuron_types, uint1_sw_t feedback);
+#if PERSIST_RESULTS != RESULTS_NONE
+void persist_results(uint64_t *out_stream);
+#endif
+
+static uint1_sw_t	neuron_type[NUMBER_OF_LAYERS][NEURONS_PER_LAYER];
+static w_dat_sw_t	synapse_weights[NUMBER_OF_NEURONS][NEURONS_PER_LAYER];
+
+#ifdef RUN_HW_VERSION
+// HW memory for network and results
+static uint32_t 	p_hw[AXI_INPUT_LENGTH];
+static uint64_t 	network_stream[AXI_NEURON_TYPE_LENGTH];
+static uint64_t 	weights_stream[AXI_WEIGHTS_PORTS][AXI_WEIGHTS_LENGTH];
+static uint64_t 	output_stream[AXI_OUTPUT_LENGTH];
+static uint64_t		out_hw[RUN_STEPS * AXI_OUTPUT_LENGTH];
+
+int run_hw_network();
+#endif /* RUN_HW_VERSION */
+
+// SW memory for network and results
+#ifdef RUN_SW_VERSION
+static uint1_sw_t	p_sw[INPUT_SYNAPSES];
+static float32_t	v_sw[RUN_STEPS * NUMBER_OF_NEURONS];
+
+int run_sw_network();
+#endif /* RUN_SW_VERSION */
+
+// App types
+#if APP_TYPE == APP_RANDOM
+#include "../networks/snn_network_random.h"
+#elif APP_TYPE == APP_XOR
+#include "../networks/snn_network_xor.h"
+#elif APP_TYPE == APP_ADDER
+#include "../networks/snn_network_adder.h"
+#elif APP_TYPE == APP_PATTERN
+#include "../networks/snn_network_pattern.h"
+#endif
+
+int start() {
+	#if RUN_TYPE == TYPE_ZYNQ
+	init_platform();
+    run_network();
+    cleanup_platform();
+	#else
+    run_network();
+	#endif
+    return 0;
+}
+
+int run_network() {
+	srand(1);
+
+	printf("\n\n");
+	printf("*****************************************************\n");
+	printf("*              Neural Network Simulation            *\n");
+	printf("*****************************************************\n");
+	printf("Neurons per layer = %d\n", NEURONS_PER_LAYER);
+	printf("Number of layers = %d\n", NUMBER_OF_LAYERS);
+	printf("Number of neurons = %d (%.1fK)\n", NUMBER_OF_NEURONS, ((float32_t)NUMBER_OF_NEURONS)/1000);
+	printf("Number of synapses = %d (%.1fM)\n", NUMBER_OF_SYNAPSES, ((float32_t)NUMBER_OF_SYNAPSES)/1000000);
+
+	printf("Initializing network...\n");
+	init_network(1, 0);
+	#if APP_TYPE == APP_RANDOM || APP_TYPE == APP_ADDER || APP_TYPE == APP_PATTERN
+	generate_inputs();
+	#endif
+
+	#ifdef RUN_HW_VERSION
+	printf("*****************************************************\n");
+	printf("*                 Running HW version                *\n");
+	printf("*****************************************************\n");
+	if (run_hw_network() != 0)
+		return -1;
+	#endif /* RUN_HW_VERSION */
+
+	#ifdef RUN_SW_VERSION
+	printf("*****************************************************\n");
+	printf("*                 Running SW version                *\n");
+	printf("*****************************************************\n");
+	if (run_sw_network() != 0)
+		return -1;
+	#endif /* RUN_SW_VERSION */
+
+  	// Saves the neuron spikes to file
+	#ifndef PERSIST_APP_RESULTS
+	#if PERSIST_HW_RESULTS != RESULTS_NONE
+		printf("*****************************************************\n");
+		printf("*                Persisting HW results              *\n");
+		printf("*****************************************************\n");
+  		persist_hw_results(neuron_type, out_hw);
+	#endif
+	#if PERSIST_SW_RESULTS != RESULTS_NONE
+		printf("*****************************************************\n");
+		printf("*                Persisting SW results              *\n");
+		printf("*****************************************************\n");
+  		persist_sw_results(neuron_type, v_sw);
+	#endif
+	#endif
+
+	#ifdef PERSIST_APP_RESULTS
+  	persist_app_results();
+	#endif
+
+  	printf("**************** Simulation finished ****************\n");
+	return 0;
+}
+
+/*****************************************************************************
+ *                        Network (Hardware version)    	                 *
+ *****************************************************************************/
+#ifdef RUN_HW_VERSION
+int run_hw_network() {
+
+	int32_t t, o_off;
+
+	#if RUN_TYPE == TYPE_ZYNQ
+	// Setting up FPGA block
+	printf("Initializing hardware blocks...\n");
+	if (hw_setup() != XST_SUCCESS) {
+		printf("Error initializing hardware blocks...\n");
+		return -1;
+	}
+	printf("Hardware blocks initialized successfully\n");
+	#endif
+
+	// Send network to FPGA
+  	printf("Sending network configuration to FPGA...\n");
+  	reset_clock();
+  	start_clock();
+  	if (hw_snn_izikevich_config_network(network_stream, (uint64_t *)output_stream) != XST_SUCCESS) {
+		printf("Error executing hardware block with 'hw_snn_izikevich_config_network'...\n");
+		return -1;
+	}
+  	stop_clock();
+  	printf("Network sent successfully in %.2f ms.\n", get_clock_ms());
+
+  	// Flush inputs array's cache
+	#if RUN_TYPE == TYPE_ZYNQ
+  	for (uint32_t i = 0; i < AXI_WEIGHTS_PORTS; i++)
+  		Xil_DCacheFlushRange((u32)weights_stream[i], AXI_WEIGHTS_LENGTH * sizeof(uint64_t));
+	#endif
+
+  	// Simulate for a period of time
+  	printf("Starting %ld steps simulation...\n", RUN_STEPS);
+  	reset_clock();
+  	for (t = 0, o_off = 0; t < RUN_STEPS; t++, o_off += AXI_OUTPUT_LENGTH) {
+
+  		// Compute/get inputs at specified time
+  		get_inputs(t);
+
+		// Calculate the spikes in the network for this time step
+		start_clock();
+		if (hw_snn_izikevich_run_step(p_hw, weights_stream, (uint64_t *)&out_hw[o_off]) != XST_SUCCESS) {
+			printf("Error executing hardware block with 'hw_snn_izikevich_run_step'...\n");
+			return -1;
+		}
+		stop_clock();
+  	}
+  	printf("=> Simulation results\n");
+  	printf("Network simulation time:\t%.2f ms.\n", (float32_t)RUNTIME_MS);
+  	printf("Total execution time:\t\t%.2f ms.\n", get_clock_ms());
+  	printf("Execution time per second:\t%.2f ms.\n", get_clock_ms()/((float32_t)RUNTIME_MS/1000));
+  	return 0;
+}
+#endif
+
+/*****************************************************************************
+ *                        Network (Software version)    	                 *
+ *****************************************************************************/
+#ifdef RUN_SW_VERSION
+int run_sw_network() {
+
+	int32_t t, v_off;
+	sw_snn_init();
+
+	// Simulate for a period of time
+	printf("Starting %ld steps simulation...\n", RUN_STEPS);
+	reset_clock();
+	for (t = 0, v_off = 0; t < RUN_STEPS; t++, v_off += NUMBER_OF_NEURONS) {
+
+		// Compute/get inputs at specified time
+		get_inputs(t);
+
+		// Calculate the spikes in the network for this time step
+		vu_dat_sw_t* v_sw_ptr = (vu_dat_sw_t *)&v_sw[v_off];
+		start_clock();
+		sw_snn_izikevich(neuron_type, synapse_weights, p_sw, v_sw_ptr);
+		stop_clock();
+
+		// Feedback if traning mode enabled
+		#ifdef NUM_TRAINING_TRIALS
+		feedback_error(t);
+		#endif
+	}
+	printf("=> Simulation results\n");
+	printf("Network simulation time:\t%.2f ms.\n", (float32_t)RUNTIME_MS);
+	printf("Total execution time:\t\t%.2f ms.\n", get_clock_ms());
+	printf("Execution time per second:\t%.2f ms.\n", get_clock_ms()/((float32_t)RUNTIME_MS/1000));
+	return 0;
+}
+#endif
+
+/*****************************************************************************
+ *                         Network Initialization    	                     *
+ *****************************************************************************/
+
+void get_inputs(int32_t t) {
+	int32_t x;
+	#ifdef RUN_HW_VERSION
+	int32_t stream_id, bit;
+	ap_uint<AXIL_SIZE> converter;
+	stream_id = 0; bit = 0;
+	#endif /* RUN_HW_VERSION */
+
+	// Possion distribution of firing inputs
+	for (x = 0; x < INPUT_SYNAPSES; x++) {
+		#ifdef RUN_SW_VERSION
+		p_sw[x] = 0;
+		#endif
+		#ifdef RUN_HW_VERSION
+		if(bit == 0) { converter = 0; }
+		#endif
+
+		uint1_sw_t spiked = get_spike(t, x);
+		if (spiked) {
+			#ifdef RUN_HW_VERSION
+			converter[bit] = 1;
+			#endif
+			#ifdef RUN_SW_VERSION
+			p_sw[x] = 1;
+			#endif
+		}
+
+		// AXI-Lite words are 32-bit
+		#ifdef RUN_HW_VERSION
+		if (++bit == AXIL_SIZE) { p_hw[stream_id++] = converter.to_uint(); bit = 0; }
+		#endif
+	}
+	#ifdef RUN_HW_VERSION
+	if(bit > 0) p_hw[stream_id++] = converter.to_uint();
+	#endif
+}
+
+void init_network(uint1_sw_t neuron_types, uint1_sw_t feedback) {
+	int32_t x, y, l, xl;
+	#ifdef RUN_HW_VERSION
+	int32_t stream_id, bit;
+	ap_uint<AXI_SIZE> converter;
+	stream_id = 0; bit = 0;
+	#endif
+
+	if (neuron_types == 1) {
+
+		// Set neuron types
+		for (l = 0; l < NUMBER_OF_LAYERS; l++) for (xl = 0; xl < NEURONS_PER_LAYER; xl++) {
+			neuron_type[l][xl] = get_neuron_type(l, xl);
+
+			#ifdef RUN_HW_VERSION
+			if (bit == 0) { converter = 0; }
+			if (neuron_type[l][xl])
+				converter[bit] = 1;
+			if (++bit == AXI_SIZE) { network_stream[stream_id++] = converter.to_uint64(); bit = 0; }
+			#endif
+		}
+		#ifdef RUN_HW_VERSION
+		if (bit != 0) { network_stream[stream_id++] = converter.to_uint64(); bit = 0; }
+		uint32_t stream_fifo = 0; stream_id = 0; bit = 0;
+		#endif
+	}
+
+	// Set input weights
+	for (x = 0; x < NEURONS_PER_LAYER; x++) {
+		for (y = 0; y < NEURONS_PER_LAYER; y++) {
+			float32_t weight = get_weight(0, x, x, y, feedback);
+			synapse_weights[x][y] = weight;
+
+			#ifdef RUN_HW_VERSION
+			#if PRECISION_TYPE == FIXED_POINT
+			converter.range(bit + WEIGHT_BITS - 1, bit) = w_dat_t(norm_weight(weight)).range();
+			#elif PRECISION_TYPE == FLOATING_POINT
+			converter.range(bit + WEIGHT_BITS - 1, bit) = ap_uint<WEIGHT_BITS>(float32_to_uint32(weight));
+			#endif
+			bit += WEIGHT_BITS;
+			if (bit == AXI_SIZE) {
+				weights_stream[stream_fifo++][stream_id] = converter.to_uint64();
+				if (stream_fifo == AXI_WEIGHTS_PORTS) {stream_fifo = 0; stream_id ++; }
+				bit = 0; converter = 0;
+			}
+			#endif /* RUN_HW_VERSION */
+		}
+		#ifdef RUN_HW_VERSION
+		if (bit > 0 || stream_fifo > 0) {
+			if (bit > 0) weights_stream[stream_fifo++][stream_id] = converter.to_uint64();
+			while(stream_fifo < AXI_WEIGHTS_PORTS) { weights_stream[stream_fifo++][stream_id] = 0; }
+			stream_id++;
+		}
+		bit = 0; converter = 0; stream_fifo = 0;
+		#endif /* RUN_HW_VERSION */
+	}
+
+	// Set weights between layers
+	x = NEURONS_PER_LAYER;
+	for (l = 1; l < NUMBER_OF_LAYERS; l++) for (xl = 0; xl < NEURONS_PER_LAYER; xl++, x++) {
+		for (y = 0; y < NEURONS_PER_LAYER; y++) {
+			float32_t weight = get_weight(l, xl, x, y, feedback);
+			synapse_weights[x][y] = weight;
+
+			#ifdef RUN_HW_VERSION
+			#if PRECISION_TYPE == FIXED_POINT
+			converter.range(bit + WEIGHT_BITS - 1, bit) = w_dat_t(norm_weight(weight)).range();
+			#elif PRECISION_TYPE == FLOATING_POINT
+			converter.range(bit + WEIGHT_BITS - 1, bit) = ap_uint<WEIGHT_BITS>(float32_to_uint32(weight));
+			#endif
+			bit += WEIGHT_BITS;
+			if (bit == AXI_SIZE) {
+				weights_stream[stream_fifo++][stream_id] = converter.to_uint64();
+				if (stream_fifo == AXI_WEIGHTS_PORTS) {stream_fifo = 0; stream_id ++; }
+				bit = 0; converter = 0;
+			}
+			#endif /* RUN_HW_VERSION */
+		}
+		#ifdef RUN_HW_VERSION
+		if (bit > 0 || stream_fifo > 0) {
+			if (bit > 0) weights_stream[stream_fifo++][stream_id] = converter.to_uint64();
+			while(stream_fifo < AXI_WEIGHTS_PORTS) { weights_stream[stream_fifo++][stream_id] = 0; }
+			stream_id++;
+		}
+		bit = 0; converter = 0; stream_fifo = 0;
+		#endif /* RUN_HW_VERSION */
+	}
+}
+
+#endif /* _START_H_ */

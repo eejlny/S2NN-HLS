@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Webtalk v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# 
+# Start of session at: Thu Jun 23 00:56:04 2016
+# Process ID: 18580
+# Current directory: C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/vivado/system.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/vivado/system.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/vivado/system.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
+# webtalk_init -webtalk_dir C:\\Users\\fgalind1\\Documents\\Bristol\\Thesis\\Workspace\\vivado\\snn_izikevich\\vivado\\system.sdk\\webtalk
+# webtalk_register_client -client project
+# webtalk_add_data -client project -key date_generated -value "Thu Jun 23 00:56:00 2016" -context "software_version_and_target_device"

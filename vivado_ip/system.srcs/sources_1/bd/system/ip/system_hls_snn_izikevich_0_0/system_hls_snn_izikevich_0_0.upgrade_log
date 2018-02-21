@@ -1,0 +1,1260 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Jun 29 19:32:56 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606291756) to (Rev. 1606291929)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Jun 29 17:58:06 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606291736) to (Rev. 1606291756)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Jun 29 17:38:31 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606291553) to (Rev. 1606291736)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Jun 29 16:02:22 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606291328) to (Rev. 1606291553)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hls_snn_izikevich_0_0'. These changes may impact your design.
+
+
+-upgraded port 's_axi_control_ARADDR' width 7 differs from original width 6
+-upgraded port 's_axi_control_AWADDR' width 7 differs from original width 6
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Jun 29 13:31:08 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606291215) to (Rev. 1606291328)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hls_snn_izikevich_0_0'. These changes may impact your design.
+
+
+-upgraded port 's_axi_control_ARADDR' width 6 differs from original width 7
+-upgraded port 's_axi_control_AWADDR' width 6 differs from original width 7
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Jun 29 12:17:10 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606290141) to (Rev. 1606291215)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Jun 29 11:03:19 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606282344) to (Rev. 1606290141)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Jun 28 23:45:54 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606282016) to (Rev. 1606282344)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hls_snn_izikevich_0_0'. These changes may impact your design.
+
+
+-upgraded port 's_axi_control_ARADDR' width 7 differs from original width 6
+-upgraded port 's_axi_control_AWADDR' width 7 differs from original width 6
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Jun 28 22:12:50 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606281930) to (Rev. 1606282016)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Jun 28 19:32:54 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606281810) to (Rev. 1606281930)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Jun 28 18:13:09 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606281804) to (Rev. 1606281810)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Jun 28 18:06:57 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606281618) to (Rev. 1606281804)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Jun 28 16:22:09 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606281438) to (Rev. 1606281618)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Jun 28 15:07:46 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606281355) to (Rev. 1606281438)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Jun 28 14:01:54 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606281313) to (Rev. 1606281355)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Jun 28 13:14:31 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606281212) to (Rev. 1606281313)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Jun 28 12:14:51 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606280034) to (Rev. 1606281212)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Jun 28 00:39:08 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606272308) to (Rev. 1606280034)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Mon Jun 27 23:11:45 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606272112) to (Rev. 1606272308)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Mon Jun 27 21:15:35 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606272047) to (Rev. 1606272112)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Mon Jun 27 20:49:20 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606271432) to (Rev. 1606272047)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hls_snn_izikevich_0_0'. These changes may impact your design.
+
+
+-upgraded port 's_axi_control_ARADDR' width 6 differs from original width 7
+-upgraded port 's_axi_control_AWADDR' width 6 differs from original width 7
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Mon Jun 27 14:34:39 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606271320) to (Rev. 1606271432)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hls_snn_izikevich_0_0'. These changes may impact your design.
+
+
+-upgraded port 's_axi_control_ARADDR' width 7 differs from original width 6
+-upgraded port 's_axi_control_AWADDR' width 7 differs from original width 6
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Mon Jun 27 13:21:40 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606271226) to (Rev. 1606271320)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Mon Jun 27 12:28:44 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606262348) to (Rev. 1606271226)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hls_snn_izikevich_0_0'. These changes may impact your design.
+
+
+-upgraded port 's_axi_control_ARADDR' width 6 differs from original width 7
+-upgraded port 's_axi_control_AWADDR' width 6 differs from original width 7
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sun Jun 26 23:50:37 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606262255) to (Rev. 1606262348)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hls_snn_izikevich_0_0'. These changes may impact your design.
+
+
+-upgraded port 's_axi_control_ARADDR' width 7 differs from original width 6
+-upgraded port 's_axi_control_AWADDR' width 7 differs from original width 6
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sun Jun 26 22:57:17 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606261630) to (Rev. 1606262255)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sun Jun 26 16:31:52 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606261625) to (Rev. 1606261630)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sun Jun 26 16:26:40 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606261429) to (Rev. 1606261625)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sun Jun 26 14:29:55 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606261348) to (Rev. 1606261429)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sun Jun 26 13:51:48 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606261240) to (Rev. 1606261348)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sun Jun 26 12:41:01 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606251847) to (Rev. 1606261240)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sat Jun 25 18:49:29 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606251732) to (Rev. 1606251847)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sat Jun 25 17:33:16 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606251631) to (Rev. 1606251732)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sat Jun 25 16:32:22 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606251533) to (Rev. 1606251631)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sat Jun 25 15:37:11 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606251506) to (Rev. 1606251533)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sat Jun 25 15:10:28 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606251356) to (Rev. 1606251506)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sat Jun 25 13:56:56 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606251241) to (Rev. 1606251356)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sat Jun 25 12:42:53 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606242121) to (Rev. 1606251241)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Fri Jun 24 21:22:29 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606241825) to (Rev. 1606242121)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Fri Jun 24 19:24:01 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606241818) to (Rev. 1606241825)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Fri Jun 24 18:27:05 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606241721) to (Rev. 1606241818)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Fri Jun 24 17:23:31 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606241632) to (Rev. 1606241721)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Fri Jun 24 16:33:30 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606241305) to (Rev. 1606241632)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Fri Jun 24 13:08:37 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606231715) to (Rev. 1606241305)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Jun 23 17:18:13 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606231552) to (Rev. 1606231715)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Jun 23 15:55:58 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606231502) to (Rev. 1606231552)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Jun 23 15:06:25 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606231407) to (Rev. 1606231502)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hls_snn_izikevich_0_0'. These changes may impact your design.
+
+
+-upgraded port 's_axi_control_ARADDR' width 6 differs from original width 7
+-upgraded port 's_axi_control_AWADDR' width 6 differs from original width 7
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Jun 23 14:09:51 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606231232) to (Rev. 1606231407)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hls_snn_izikevich_0_0'. These changes may impact your design.
+
+
+-upgraded port 's_axi_control_ARADDR' width 7 differs from original width 6
+-upgraded port 's_axi_control_AWADDR' width 7 differs from original width 6
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Jun 23 13:17:34 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606231225) to (Rev. 1606231232)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Jun 23 12:29:52 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606231132) to (Rev. 1606231225)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Jun 23 11:40:07 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606222347) to (Rev. 1606231132)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Jun 22 23:47:59 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606222202) to (Rev. 1606222347)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Jun 22 22:04:16 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606222106) to (Rev. 1606222202)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Jun 22 21:08:39 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606221754) to (Rev. 1606222106)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'system_hls_snn_izikevich_0_0'. These changes may impact your design.
+
+
+-upgraded port 's_axi_control_ARADDR' width 6 differs from original width 12
+-upgraded port 's_axi_control_AWADDR' width 6 differs from original width 12
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Jun 22 17:56:24 2016
+| Host         : FELIPEGS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_hls_snn_izikevich_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_hls_snn_izikevich_0_0 (xilinx.com:hls:hls_snn_izikevich:1.0) from (Rev. 1606221523) to (Rev. 1606221754)
+

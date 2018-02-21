@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.xilinx.sdk.tcf.debug.LaunchConfigurationType">
+<stringAttribute key="com.xilinx.sdk.gdb.launch.DataFiles" value=""/>
+<booleanAttribute key="com.xilinx.sdk.tcf.debug.ui.breakpoint.main" value="true"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.ui.exec.script" value="false"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.ui.exec.script.location" value=""/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uiapplication.path" value=""/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uidebug.type" value="STANDALONE_DEBUG"/>
+<booleanAttribute key="com.xilinx.sdk.tcf.debug.uienable.crosstrigger" value="false"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uifpga.device" value="Auto Detect"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uihw.bit.file" value="system_wrapper.bit"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uihw.init.tcl" value="ps7_init.tcl"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uihw_platform.name" value="system_wrapper_hw_platform_0"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uilinux.host" value=""/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uilinux.port" value="1534"/>
+<booleanAttribute key="com.xilinx.sdk.tcf.debug.uimonitor" value="false"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uiproc.appl.map" value="{&quot;ps7_cortexa9_0&quot;:{&quot;xilinx.tcf.application&quot;:&quot;Debug/snn_izikevich_app.elf&quot;,&quot;xilinx.tcf.datafiles&quot;:&quot;&quot;,&quot;xilinx.tcf.no_download&quot;:false,&quot;xilinx.tcf.project&quot;:&quot;snn_izikevich_app&quot;,&quot;xilinx.tcf.relocate&quot;:false,&quot;xilinx.tcf.relocate_addr&quot;:&quot;&quot;,&quot;xilinx.tcf.reset&quot;:true,&quot;xilinx.tcf.stop_at_entry&quot;:false}}"/>
+<booleanAttribute key="com.xilinx.sdk.tcf.debug.uiprogram.fpga" value="true"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uiproject.name" value=""/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uips.device" value="Auto Detect"/>
+<booleanAttribute key="com.xilinx.sdk.tcf.debug.uips7.init" value="true"/>
+<booleanAttribute key="com.xilinx.sdk.tcf.debug.uips7.post" value="true"/>
+<booleanAttribute key="com.xilinx.sdk.tcf.debug.uireset.apu" value="false"/>
+<booleanAttribute key="com.xilinx.sdk.tcf.debug.uireset.clear.rpu" value="false"/>
+<booleanAttribute key="com.xilinx.sdk.tcf.debug.uireset.lock.step" value="false"/>
+<booleanAttribute key="com.xilinx.sdk.tcf.debug.uireset.system" value="true"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uitarget.peer" value="Local"/>
+</launchConfiguration>

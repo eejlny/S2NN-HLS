@@ -1,0 +1,21 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2015.4
+  Build 1412921 on Wed Nov 18 09:58:55 AM 2015
+  Copyright (C) 2015 Xilinx Inc. All rights reserved.
+================================================================
+@I [HLS-10] Running 'C:/Xilinx/Vivado_HLS/2015.4/bin/unwrapped/win64.o/vivado_hls.exe'
+            for user 'fgalind1' on host 'felipegs' (Windows NT_amd64 version 6.2) on Thu Jun 23 19:33:43 +0100 2016
+            in directory 'C:/Users/fgalind1/Documents/Bristol/Thesis/Workspace/vivado/snn_izikevich/hls/solution'
+csim_design can't be opened.
+couldn't read file "csim_design": no such file or directory
+    while executing
+"source csim_design"
+    invoked from within
+"hls::main csim_design"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

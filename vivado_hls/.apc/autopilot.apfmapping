@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="snn_config.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\snn_config.h"/>
+    <originFiles name="snn_defs.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\common\snn_defs.h"/>
+    <originFiles name="snn_env.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\common\snn_env.h"/>
+    <originFiles name="snn_izikevich.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\hw\snn_izikevich.h"/>
+    <originFiles name="snn_izikevich_axi.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\hw\snn_izikevich_axi.h"/>
+    <originFiles name="snn_izikevich_top.cpp" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\hw\snn_izikevich_top.cpp"/>
+    <originFiles name="snn_network.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\common\snn_network.h"/>
+    <originFiles name="snn_types.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\common\snn_types.h"/>
+  </source>
+  <testbench>
+    <originFiles name="snn_start.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\common\snn_start.h"/>
+    <originFiles name="snn_results.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\common\snn_results.h"/>
+    <originFiles name="snn_network_xor.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\networks\snn_network_xor.h"/>
+    <originFiles name="snn_network_random.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\networks\snn_network_random.h"/>
+    <originFiles name="snn_network_pattern.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\networks\snn_network_pattern.h"/>
+    <originFiles name="snn_network_defs.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\networks\snn_network_defs.h"/>
+    <originFiles name="snn_network_adder.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\networks\snn_network_adder.h"/>
+    <originFiles name="snn_izikevich_sw.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\sw\snn_izikevich_sw.h"/>
+    <originFiles name="snn_izikevich_hw_sim.h" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\hw\snn_izikevich_hw_sim.h"/>
+    <originFiles name="main_hls.cpp" path="C:\Users\fgalind1\Documents\Bristol\Thesis\Workspace\vivado\snn_izikevich\src\main_hls.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
